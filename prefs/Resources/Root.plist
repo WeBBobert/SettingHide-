@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>SettingsHide</string>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>SettingsHide</string>
+			<key>footerText</key>
+			<string>Select installed apps, then choose the Settings sections where their rows should be hidden. This changes the display only. Usage records, storage, charts and notification delivery remain unchanged.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Enable SettingsHide</string>
+			<key>key</key>
+			<string>Enabled</string>
+			<key>default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>label</key>
+			<string>Choose installed apps</string>
+			<key>detail</key>
+			<string>ATLApplicationListMultiSelectionController</string>
+			<key>defaults</key>
+			<string>com.example.batteryhide</string>
+			<key>key</key>
+			<string>HiddenBundleIDs</string>
+			<key>default</key>
+			<array/>
+			<key>defaultApplicationSwitchValue</key>
+			<false/>
+			<key>useSearchBar</key>
+			<true/>
+			<key>hideSearchBarWhileScrolling</key>
+			<false/>
+			<key>includeIdentifiersInSearch</key>
+			<true/>
+			<key>showIdentifiersAsSubtitle</key>
+			<true/>
+			<key>sections</key>
+			<array>
+				<dict>
+					<key>sectionType</key>
+					<string>System</string>
+				</dict>
+				<dict>
+					<key>sectionType</key>
+					<string>User</string>
+				</dict>
+			</array>
+			<key>get</key>
+			<string>readPreferenceValue:</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Show all apps</string>
+			<key>action</key>
+			<string>showEverything</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Settings sections</string>
+			<key>footerText</key>
+			<string>Battery is enabled by default. Other sections are experimental and start off. Support depends on the section using recognized UIKit table rows; SwiftUI and collection-based lists may remain visible. Blank gaps may remain.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Battery</string>
+			<key>key</key>
+			<string>HideBattery</string>
+			<key>default</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>iPhone Storage (experimental)</string>
+			<key>key</key>
+			<string>HideStorage</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Apps (experimental)</string>
+			<key>key</key>
+			<string>HideApps</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Notifications (experimental)</string>
+			<key>key</key>
+			<string>HideNotifications</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Screen Time (experimental)</string>
+			<key>key</key>
+			<string>HideScreenTime</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Apply changes</string>
+			<key>action</key>
+			<string>refreshBatteryHide</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Previous choices</string>
+			<key>footerText</key>
+			<string>Names selected in BatteryHide 0.1.0 still apply. Turn them off here if you want to use only installed-app selections.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Legacy name selections</string>
+			<key>detail</key>
+			<string>BHAppPickerController</string>
+			<key>isController</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Troubleshooting</string>
+			<key>footerText</key>
+			<string>If an enabled section remains unchanged, turn logging on, visit that section, then open diagnostics. The log contains controller and bundle class names only; it does not include usage records or selected apps.</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>label</key>
+			<string>Diagnostic logging</string>
+			<key>key</key>
+			<string>DiagnosticLogging</string>
+			<key>default</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Show diagnostics</string>
+			<key>action</key>
+			<string>showDiagnostics</string>
+		</dict>
+	</array>
+</dict>
+</plist>
